@@ -196,13 +196,11 @@ enum PFNAVIGATIONMODE navigationMode_2_PF_NAVIGATION(PanframeNavigationMode mode
 
 - (instancetype)init
 {
-    NSLog(@"Called simple init");
     return [self initWithFrame:CGRectZero];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    NSLog(@"Called simple initWithFrame");
     if (self = [super initWithFrame:frame]) {
         pfView                  = [PFObjectFactory viewWithFrame:frame];
         pfView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -489,6 +487,6 @@ enum PFNAVIGATIONMODE navigationMode_2_PF_NAVIGATION(PanframeNavigationMode mode
             navigationMode = PF_NAVIGATION_TOUCH;
             break;
     }
-    
+
     return navigationMode;
 }
